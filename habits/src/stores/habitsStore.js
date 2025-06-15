@@ -1,8 +1,9 @@
+// HabitsStore.js
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
 
 // Export the store so it can be used in components
-export const useHabitStore = defineStore('habit', () => {
+export const useHabitsStore = defineStore('habit', () => {
   const habits = ref([
     {
       id: 1,

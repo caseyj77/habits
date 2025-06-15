@@ -1,12 +1,14 @@
+// HabitCard.vue
 <script setup>
 import { ref, watch } from 'vue'
 
 const props = defineProps({
-  name: {
-    type: String,
-    required: true,
-  },
-})
+  id: Number,
+  name: String,
+  completed: Boolean
+});
+
+
 
 const completed = ref(false)
 
