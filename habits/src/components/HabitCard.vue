@@ -1,27 +1,28 @@
 // HabitCard.vue
 <script setup>
-import { ref, watch } from 'vue'
+import { useHabitsStore } from '@/stores/habitsStore.js'
+
+const habitsStore = useHabitsStore()
 
 const props = defineProps({
   id: Number,
   name: String,
-  completed: Boolean
-});
-
-
-
-const completed = ref(false)
-
-watch(completed, (val) => {
-  console.log(`Habit "${props.name}" completed:`, val)
+  completed: Boolean,
 })
+
+
 </script>
 
 <template>
   <div class="habit-card">
     <div class="habit-card__header">
       <h2>{{ name }}</h2>
-      <input type="checkbox" v-model="completed" />
+      <input
+        type="checkbox"
+        :checked="completed"
+        @change="habitsStore.toggleHabit(id)"
+      />
+
     </div>
     <div class="habit-card__content">
       <slot />

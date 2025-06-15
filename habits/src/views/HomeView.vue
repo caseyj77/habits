@@ -1,6 +1,8 @@
 //HabitView.vue shold be used as the homepage
 <script setup>
 import HabitList from '@/components/HabitList.vue'
+import HabitCard from '@/components/HabitCard.vue'
+import AddHabitForm from '@/components/AddHabitForm.vue'
 </script>
 
 <template>
@@ -9,6 +11,7 @@ import HabitList from '@/components/HabitList.vue'
     <p>Welcome! Ready to build better habits?</p>
 
     <HabitList />
+    <AddHabitForm />
   </div>
 </template>
 

@@ -22,10 +22,23 @@ export const useHabitsStore = defineStore('habit', () => {
   const toggleHabit = (id) => {
     const habit = habits.value.find((h) => h.id === id)
     if (habit) habit.completed = !habit.completed
+
+    console.log(`Toggling habit with id: ${id}`)
+  }
+
+  const addHabit = ({ name }) => {
+    const newHabit = {
+      id: Date.now(),
+      name,
+      description: '',
+      completed: false,
+    }
+    habits.value.push(newHabit)
   }
 
   return {
     habits,
     toggleHabit,
+    addHabit,
   }
 })
