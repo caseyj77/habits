@@ -13,6 +13,7 @@ const habitsStore = useHabitsStore()
       :key="habit.id"
       :id="habit.id"
       :name="habit.name"
+      :description="habit.description"
       :completed="habit.completed"
     />
   </div>
@@ -22,6 +23,6 @@ const habitsStore = useHabitsStore()
 .habit-list {
   display: flex;
   flex-direction: column;
-  gap: 1 rem;
+  gap: 1rem;
 }
 </style>

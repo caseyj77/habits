@@ -1,7 +1,6 @@
 //HabitView.vue shold be used as the homepage
 <script setup>
 import HabitList from '@/components/HabitList.vue'
-import HabitCard from '@/components/HabitCard.vue'
 import AddHabitForm from '@/components/AddHabitForm.vue'
 </script>
 
@@ -16,14 +15,11 @@ import AddHabitForm from '@/components/AddHabitForm.vue'
 
 <style scoped>
 .p-4 {
-  padding: 1rem;
+  padding: 1 rem;
 }
 
 h1 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5 rem;
 }
 
-p {
-  margin-bottom: 1.5rem;
-}
 </style>

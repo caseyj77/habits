@@ -26,15 +26,16 @@ export const useHabitsStore = defineStore('habit', () => {
     console.log(`Toggling habit with id: ${id}`)
   }
 
-  const addHabit = ({ name }) => {
+  const addHabit = ({ name, description }) => {
     const newHabit = {
       id: Date.now(),
       name,
-      description: '',
+      description,
       completed: false,
     }
     habits.value.push(newHabit)
   }
+
 
   return {
     habits,

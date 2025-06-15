@@ -7,6 +7,7 @@ const habitsStore = useHabitsStore()
 const props = defineProps({
   id: Number,
   name: String,
+  description: String,
   completed: Boolean,
 })
 
@@ -25,6 +26,7 @@ const props = defineProps({
 
     </div>
     <div class="habit-card__content">
+      <p class="habit-description">{{ description }}</p>
       <slot />
     </div>
   </div>
